@@ -1,0 +1,83 @@
+:root {
+    /*bg colors*/
+    --background: #02050e;
+    --primary: #1e50ff;
+    --secondary: #272d37;
+    --btn-bg: #050d26;
+    --bg-azul-10: #e9eeff;
+    --bg-white: #fff;
+    --bg-electric: #f0fbff;
+    --nav-bg: #0f1525;
+    /*text decoration*/
+    --text-gray: #adb9c7;
+    --text-white: #f3f4f6;
+    /*decoration*/
+    --fire: #ff6d00;
+    --electric: #64d3ff;
+}
+
+body {
+    background-color: var(--background);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/*header*/
+
+.logo {
+    height: 50%;
+    border-radius: 1rem;
+}
+
+header {
+    background: var(--primary);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0px 25px;
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    gap: 200px;
+}
+
+.navbar-list {
+    gap: 30px;
+}
+
+.navbar-list a {
+    color: var(--text-white);
+    font-size: 18px;
+}
+
+.icon-user {
+    border-radius: 10px;
+    height: 30px;
+    padding: 5px 10px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+a:hover {
+    color: var(--background);
+   
+}
+
