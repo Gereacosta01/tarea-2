@@ -25,29 +25,22 @@
     font-family: 'Raleway', sans-serif;
 }
 
-body {
-
-}
-
 /*header*/
-
-.logo {
-    height: 50%;
-    border-radius: 1rem;
-    cursor: pointer;
-}
-
 header {
-    background: rgb(255,166,0);
-    background: linear-gradient(90deg, rgba(255,166,0,1) 40%, rgba(255,0,125,1) 56%);;
+    background: linear-gradient(90deg, rgba(91,250,246,1) 0%, rgba(0,43,255,1) 57%);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    padding: 0px 25px;  
+    height: 65px;
+    padding: 0px 30px;
     position: fixed;
     top: 0;
+}
+
+.logo{
+    height: 40%;
+    border-radius: 12px;
 }
 
 .navbar,
@@ -58,51 +51,51 @@ header {
 }
 
 .navbar {
-    gap: 200px;
+    gap: 150px;
 }
 
 .navbar-list {
-    gap: 40px;
+gap: 30px;
 }
 
-.navbar-list a {
+.navbar-list a{
     color: var(--text-white);
-    font-size: 18px;
-}
-
-.icon-user {
-    border-radius: 10px;
-    height: 30px;
-    padding: 5px 10px;
-    margin-right: 1rem;
-    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 a:hover {
-    color: var(--background);
+    color: black;
+}
+
+.cart-icon {
+    cursor: pointer;
+    height: 25px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 /*cuerpo*/
 
 main {
-    background-image: url("./img/fondo-2.webp");
-    background-size: contain;
+    background-color: var(--bg-azul-10);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    color: #050d26;
     width: 100%;
 }
 
-/* primera seccion*/
-/*id*/
 #hero {
     margin-top: 65px;
-    padding: 70px 0;
-    max-width: 1200px;
+    padding: 70px 0px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    max-width: 1200px;
+    justify-content: center;
 }
 
 .hero-info {
@@ -111,22 +104,24 @@ main {
     gap: 20px;
     width: 50%;
 }
-/* acá le decimos a la clase que tenemos un h1 dentro y que haga tal cosa*/
+
 .hero-info h1 {
-    font-size: 42px;
-    font-weight: 800;
+    font-size: 40px;
     width: 80%;
-    color: black;
+    font-weight: 800;
+    color: #02050e;
 }
 
 .hero-info p {
     font-size: 15px;
     width: 70%;
-    color: black;
+    color: var(--secondary);
+    line-height: 20px;
 }
-/* aca le decimos a la clase que tenemos un p dentro que contiene un span*/
+
 .hero-info p > span {
-    font-weight: 800;
+    font-weight: 700;
+
 }
 
 .hero-btn {
@@ -136,48 +131,61 @@ main {
 }
 
 .hero-btn a {
-    color: black;
-    font-weight: 600;
-    background-color: #fa5ba9;
+    color: var(--background);
+    border: 3px solid var(--electric);
+    width: 150px;
+    padding: 8px 0;
+    align-items: center;
     border-radius: 10px;
-    padding: 10px;
     text-align: center;
 }
 
-.hero-card {
-    width: 350px;
-    background: var(--secondary);
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    opacity: 0.8;
+.hero-btn a:hover {
+    background-color: var(--electric);
 }
 
-.hero-card img {
+.hero-img {
     border-radius: 10px;
-    height: 400px;
+    opacity: 0.9;
+}
+
+.hero-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
 }
 
 /*segunda seccion*/
 
 #info {
     max-width: 1200px;
-    margin: 70px 0; 
-
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 70px 0;
 }
 
-.div-text {
-    color: var(--text-white);
-    background-color: var(--secondary);
-    padding: 40px 30px;
+.info-nosotros h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.info-nosotros p {
+    font-size: 18px;
+    width: 100%;
+    line-height: 30px;
+    color: var(--secondary);
+}
+
+.info-nosotros p > a {
+    color: var(--background);
     border-radius: 10px;
-    width: 1000px;
-    opacity: 0.7;
+    padding: 5px 0;
+    align-items: center;
 }
 
-.div-text p > span {
-    font-weight: 700;
+.info-nosotros p > a:hover {
+    background-color: var(--electric);
 }
