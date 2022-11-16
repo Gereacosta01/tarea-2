@@ -36,6 +36,7 @@ header {
     padding: 0px 30px;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 .logo{
@@ -52,6 +53,16 @@ header {
 
 .navbar {
     gap: 150px;
+    display: flex;
+}
+
+.navbar i {
+    font-size: 36px;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
 }
 
 .navbar-list {
@@ -189,3 +200,73 @@ main {
 .info-nosotros p > a:hover {
     background-color: var(--electric);
 }
+
+
+
+
+
+/*responsive*/
+
+@media (max-width:992px) {
+    .cart-icon {
+        display: none;
+    }
+    .hero-info {
+        text-align: center;
+        width: 90%;
+        align-items: center;
+    }
+    .hero-info h1 {
+        display: block;
+        width: 100%;
+    }
+    .hero-info p {
+        max-width: 80%;
+        font-size: 16px;
+    }
+    .hero-btn {
+        justify-content: center;
+    }
+    #hero {
+        flex-direction: column;
+        gap: 40px;
+    }
+    #info {
+        font-size: 15px;
+        width: 80%;
+    }
+}
+
+@media (max-width:576px) {
+    .navbar ol {
+        background: linear-gradient(90deg, rgba(91,250,246,1) 0%, rgba(0,43,255,1) 57%);
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 65px;
+        left: 0;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(200%);
+        transition: all 0.3s ease-in-out;
+    }
+    .navbar i {
+        display: flex;
+    }
+    .hero-img {
+        display: none;
+    }
+    .cart-icon {
+        display: none;
+    }
+    
+    #toggle-menu:checked + .navbar-list {
+        transform: translateX(0%);
+        transition: all 0.3s ease-in;
+    }
+    .hero-info {
+        max-width: 100%;
+    }
+}
+
