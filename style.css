@@ -27,7 +27,7 @@
 
 /*header*/
 header {
-    background: linear-gradient(180deg, rgba(175,91,91,1) 50%, rgba(255,250,250,1) 80%);;
+    background:  rgba(175,91,91,1);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -120,7 +120,10 @@ main {
     font-size: 40px;
     width: 80%;
     font-weight: 800;
-    color: #02050e;
+    background:  radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .hero-info p {
@@ -168,7 +171,7 @@ main {
 
 /*segunda seccion*/
 
-#nosotros {
+#info {
     max-width: 1200px;
     align-items: center;
     justify-content: center;
@@ -185,9 +188,10 @@ main {
 
 .info-nosotros p {
     font-size: 18px;
-    width: 100%;
+    width: 90%;
     line-height: 30px;
     color: var(--secondary);
+    margin: 0px 20px;
 }
 
 .info-nosotros p > a {
@@ -198,7 +202,7 @@ main {
 }
 
 .info-nosotros p > a:hover {
-    background-color: var(--electric);
+    background-color: #af5b5b;
 }
 
 /*tercer seccion*/
@@ -216,19 +220,7 @@ main {
     font-weight: 800;
     font-size: 32px
 }
-/*
-.izquierda {
-    align-self: flex-start;
-}
 
-.center {
-    align-self: center;
-}
-
-.derecha {
-    align-self: flex-end;
-}
-*/
 .container-cards{
     display: flex;
     flex-direction: row;
@@ -266,6 +258,28 @@ main {
     width: 50px;
 }
 
+/*footer*/
+footer {
+    background: #E4C8C8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+footer a, p {
+    color: black;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.foot-link {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
 
 
 /*responsive*/
@@ -294,15 +308,15 @@ main {
         flex-direction: column;
         gap: 40px;
     }
-    #info {
-        font-size: 15px;
-        width: 80%;
+    .container-cards {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 @media (max-width:576px) {
     .navbar ol {
-        background: linear-gradient(90deg, rgba(91,250,246,1) 0%, rgba(0,43,255,1) 57%);
+        background: linear-gradient(180deg, rgba(175,91,91,1) 40%, rgba(228,200,200,1) 100%);
         width: 100%;
         height: calc(100vh - 80px);
         position: absolute;
